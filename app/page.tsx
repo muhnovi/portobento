@@ -324,7 +324,7 @@ export default function App() {
             title="My Portfolio"
             sub="muhfi.my.id"
             bgIcon="bg-orange-500"
-            href="https://muhfi.my.id"
+            href="https://portfolio.muhfi.my.id"
           />
         </div>
 
