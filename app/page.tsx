@@ -218,7 +218,7 @@ const TikTokCard = () => (
       <h3 className="font-bold text-lg mb-2">TikTok</h3>
       <div className="text-sm text-gray-500 mb-4">@muhnov_</div>
       <button className="w-full bg-[#ff0050] text-white py-3 px-6 rounded-full font-bold text-sm shadow-md hover:brightness-110 transition-all active:scale-95">
-        Follow 50
+        Follower 50
       </button>
     </div>
   </BentoCard>
