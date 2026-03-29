@@ -16,8 +16,10 @@ import { button } from "framer-motion/client";
 
 // --- Data Mockup (Berdasarkan Screenshot) ---
 const profileData = {
-  name: "MuhFI",
-  title: "Frontend | Designer | Creator",
+  name: "Muhfi",
+  title: "Frontend Developer & Designer",
+  subtitle: "Bikin website modern, cepat, dan enak dipakai.",
+  subtext: "Link resmi saya ada di bawah — portfolio, social media, dan kontak kolaborasi 👇",
   avatar:
     "https://avatar.iran.liara.run/public/1", // Placeholder avatar
   handle: "@muhfi",
@@ -241,16 +243,16 @@ const DiscordCard = () => (
 
 // 6. Kartu Relume (Link generic)
 const LinkPreviewCard = () => (
-  <BentoCard colSpan={2} href="https://relume.1stcollab.com" className="flex flex-row items-center gap-4">
-    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center shrink-0">
-      <LinkIcon size={24} className="text-gray-600" />
+  <BentoCard colSpan={2} href="https://portfolio.muhfi.my.id" className="flex flex-row items-center gap-4">
+    <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center shrink-0">
+      <Globe size={24} className="text-orange-500" />
     </div>
     <div className="overflow-hidden">
-      <h3 className="font-bold text-lg truncate">Relume Websites</h3>
-      <p className="text-gray-400 text-sm truncate">relume.1stcollab.com</p>
+      <h3 className="font-bold text-lg truncate">Portfolio</h3>
+      <p className="text-gray-400 text-sm truncate">portfolio.muhfi.my.id</p>
     </div>
-    <div className="ml-auto bg-gray-100 p-2 rounded-full">
-      <ArrowUpRight size={20} className="text-gray-500" />
+    <div className="ml-auto bg-orange-500 p-2 rounded-full">
+      <ArrowUpRight size={20} className="text-white" />
     </div>
   </BentoCard>
 );
@@ -280,17 +282,32 @@ export default function App() {
               />
             </motion.div>
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight mb-2 text-gray-900">
+          <h1 className="text-4xl font-extrabold tracking-tight mb-1 text-gray-900">
             {profileData.name}
           </h1>
-          <p className="text-lg text-gray-500 max-w-lg font-medium">
+          <p className="text-lg font-semibold text-gray-600 mb-2">
             {profileData.title}
+          </p>
+          <p className="text-base text-gray-500 max-w-sm mb-4">
+            {profileData.subtitle}
+          </p>
+          <p className="text-sm text-gray-400 max-w-sm">
+            {profileData.subtext}
           </p>
         </motion.div>
 
-        {/* Bento Grid Layout */}
+        {/* Bento Grid Layout — CTA Priority: Portfolio, Instagram, TikTok, Facebook, Discord, Lokasi */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 auto-rows-[minmax(180px,auto)]">
-          {/* Row 1 */}
+          {/* 1. Portfolio — full width on mobile, 2-col on desktop */}
+          <LinkPreviewCard />
+
+          {/* 2. Instagram — besar */}
+          <InstagramCard />
+
+          {/* 3. TikTok */}
+          <TikTokCard />
+
+          {/* 4. Facebook */}
           <SocialLinkCard
             icon={Facebook}
             title="Muhammad Noviyanto"
@@ -299,41 +316,16 @@ export default function App() {
             href="https://facebook.com/muhammad.noviyanto.2025"
           />
 
-          <TikTokCard />
-
-          <InstagramCard />
-
-          {/* Row 2 (Flows around the big Instagram card on desktop) */}
-          <SocialLinkCard
-            icon={AtSign}
-            title="MuhFI"
-            sub="threads.com"
-            bgIcon="bg-black"
-            href="https://threads.net"
-          />
-
-          <MapCard />
-
-          {/* Row 3 */}
+          {/* 5. Discord */}
           <DiscordCard />
 
-          <LinkPreviewCard />
-
-          <SocialLinkCard
-            icon={Globe}
-            title="My Portfolio"
-            sub="muhfi.my.id"
-            bgIcon="bg-orange-500"
-            href="https://portfolio.muhfi.my.id"
-          />
+          {/* 6. Lokasi / Maps */}
+          <MapCard />
         </div>
 
-        {/* Footer Credit */}
-        <div className="mt-20 text-center flex items-center justify-center gap-2 opacity-40 hover:opacity-100 transition-opacity">
-          <div className="w-6 h-6 bg-black rounded-md flex items-center justify-center">
-            <div className="w-2 h-2 bg-white rounded-full"></div>
-          </div>
-          <span className="font-bold text-sm">Muhammad Noviyanto</span>
+        {/* Footer */}
+        <div className="mt-20 text-center opacity-50 hover:opacity-100 transition-opacity">
+          <span className="text-sm text-gray-500">© 2026 Muhfi — Official Links</span>
         </div>
       </div>
     </div>

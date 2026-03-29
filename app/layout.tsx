@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MuhFI",
-  description: "Sosial Media",
+  title: "Muhfi | Frontend Developer & Link Hub",
+  description: "Official links Muhfi — portfolio, social media, dan kontak kolaborasi.",
 };
 
 export default function RootLayout({
