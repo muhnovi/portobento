@@ -248,7 +248,7 @@ const EmailCard = ({ index }: { index: number }) => (
 // --- Main App ---
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#f3f3f3] dark:bg-[#0a0a0a] text-zinc-900 dark:text-white pb-24 pt-12 px-4 sm:px-6 font-[var(--font-space-grotesk)]">
+    <div className="min-h-screen bg-[#f3f3f3] dark:bg-[#0a0a0a] text-zinc-900 dark:text-white pb-24 pt-12 px-4 sm:px-6 font-(--font-space-grotesk)">
       <div className="max-w-2xl mx-auto">
 
         {/* Profile Header */}
