@@ -11,7 +11,7 @@ export default function robots() {
         disallow: [],
       },
     ],
-    sitemap: "https://muhfi.my.id/sitemap.xml",
-    host: "https://muhfi.my.id",
+    sitemap: "https://www.muhfi.my.id/sitemap.xml",
+    host: "https://www.muhfi.my.id",
   };
 }

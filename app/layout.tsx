@@ -29,17 +29,17 @@ export const metadata: Metadata = {
     "Portfolio resmi Muhammad Noviyanto (Muhnov / MuhFi), Frontend Developer. Next.js, Tailwind CSS, dan Shadcn UI.",
   keywords:
     "Muhammad Noviyanto, Muhnov, MuhFi, Frontend Developer, Next.js Developer, Web Developer Indonesia",
-  authors: [{ name: "Muhammad Noviyanto", url: "https://muhfi.my.id" }],
+  authors: [{ name: "Muhammad Noviyanto", url: "https://www.muhfi.my.id" }],
   creator: "Muhammad Noviyanto",
-  metadataBase: new URL("https://muhfi.my.id"),
+  metadataBase: new URL("https://www.muhfi.my.id"),
   alternates: {
-    canonical: "https://muhfi.my.id",
+    canonical: "https://www.muhfi.my.id",
   },
   openGraph: {
     title: "Muhammad Noviyanto — Frontend Developer",
     description:
       "Portfolio resmi Muhammad Noviyanto, Frontend Developer dari Sukoharjo. Spesialisasi Next.js, Tailwind CSS, dan Shadcn UI.",
-    url: "https://muhfi.my.id",
+    url: "https://www.muhfi.my.id",
     siteName: "Muhammad Noviyanto",
     locale: "id_ID",
     type: "website",
@@ -66,8 +66,8 @@ const jsonLd = {
   "@type": "Person",
   name: "Muhammad Noviyanto",
   alternateName: ["Muhnov", "MuhFi"],
-  url: "https://muhfi.my.id",
-  image: "https://muhfi.my.id/avatar.jpg",
+  url: "https://www.muhfi.my.id",
+  image: "https://www.muhfi.my.id/avatar.jpg",
   sameAs: [
     "https://github.com/muhnov",
     "https://x.com/MuhammadNoviya6",
