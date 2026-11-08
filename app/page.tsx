@@ -18,7 +18,8 @@ const profileData = {
   name: "Muhfi",
   title: "Frontend Developer & Designer",
   subtitle: "Bikin website modern, cepat, dan enak dipakai.",
-  subtext: "Link resmi saya ada di bawah — portfolio, social media, dan kontak kolaborasi 👇",
+  subtext:
+    "Link resmi saya ada di bawah — portfolio, social media, dan kontak kolaborasi 👇",
   avatar: "/avatar.jpg",
 };
 
@@ -73,7 +74,11 @@ const BentoCard = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-40px" }}
-      whileHover={{ scale: 1.025, boxShadow: "0 12px 40px rgba(0,0,0,0.10)", zIndex: 10 }}
+      whileHover={{
+        scale: 1.025,
+        boxShadow: "0 12px 40px rgba(0,0,0,0.10)",
+        zIndex: 10,
+      }}
       whileTap={{ scale: 0.96, opacity: 0.85 }}
       transition={spring}
       className={`relative overflow-hidden rounded-3xl border p-6 cursor-pointer block no-underline ${base} ${className}`}
@@ -101,7 +106,10 @@ const InstagramCard = ({ index }: { index: number }) => (
     <p className="text-sm font-mono text-zinc-400 mb-4">@muh.noviyanto</p>
     <div className="grid grid-cols-3 gap-2 flex-1">
       {[1, 3, 4, 5, 7, 10].map((i) => (
-        <div key={i} className="bg-zinc-100 rounded-xl overflow-hidden aspect-square">
+        <div
+          key={i}
+          className="bg-zinc-100 rounded-xl overflow-hidden aspect-square"
+        >
           <img
             src={`https://picsum.photos/200/200?random=${i}`}
             alt="post"
@@ -131,7 +139,9 @@ const PortfolioCard = ({ index }: { index: number }) => (
     </div>
     <div className="flex-1 overflow-hidden">
       <h3 className="font-bold text-lg tracking-tight">Portfolio</h3>
-      <p className="text-zinc-400 text-sm font-mono truncate">portfolio.muhfi.my.id</p>
+      <p className="text-zinc-400 text-sm font-mono truncate">
+        portfolio.muhfi.my.id
+      </p>
     </div>
     <div className="bg-white text-zinc-900 p-2.5 rounded-full shrink-0">
       <ArrowUpRight size={18} />
@@ -141,7 +151,11 @@ const PortfolioCard = ({ index }: { index: number }) => (
 
 // --- TikTok Card ---
 const TikTokCard = ({ index }: { index: number }) => (
-  <BentoCard href="https://tiktok.com/@muhnov_" index={index} className="flex flex-col justify-between">
+  <BentoCard
+    href="https://tiktok.com/@muhnov_"
+    index={index}
+    className="flex flex-col justify-between"
+  >
     <div className="w-11 h-11 bg-zinc-900 rounded-2xl flex items-center justify-center text-white mb-3">
       <Music size={20} />
     </div>
@@ -166,7 +180,9 @@ const FacebookCard = ({ index }: { index: number }) => (
       <Facebook size={20} />
     </div>
     <div>
-      <h3 className="font-bold text-lg tracking-tight leading-tight">Muhammad Noviyanto</h3>
+      <h3 className="font-bold text-lg tracking-tight leading-tight">
+        Muhammad Noviyanto
+      </h3>
       <p className="text-zinc-400 text-sm font-mono mt-1">facebook.com</p>
     </div>
   </BentoCard>
@@ -184,33 +200,35 @@ const DiscordCard = ({ index }: { index: number }) => (
       <MessageCircle size={20} />
     </div>
     <div>
-      <h3 className="font-bold text-xl tracking-tight text-white">Chat with me!</h3>
+      <h3 className="font-bold text-xl tracking-tight text-white">
+        Chat with me!
+      </h3>
       <p className="text-zinc-400 text-sm font-mono mt-1">discord.gg</p>
     </div>
   </BentoCard>
 );
 
 // --- Twitter/X Card ---
-const TwitterCard = ({ index }: { index: number }) => (
-  <BentoCard
-    href="https://x.com/MuhammadNoviya6"
-    index={index}
-    className="flex flex-col justify-between"
-  >
-    <div className="w-11 h-11 bg-zinc-900 rounded-2xl flex items-center justify-center text-white mb-3">
-      <Twitter size={20} />
-    </div>
-    <div>
-      <h3 className="font-bold text-lg tracking-tight">X / Twitter</h3>
-      <p className="text-zinc-400 text-sm font-mono mt-1">@MuhammadNoviya6</p>
-    </div>
-  </BentoCard>
-);
+// const TwitterCard = ({ index }: { index: number }) => (
+//   <BentoCard
+//     href="https://x.com/"
+//     index={index}
+//     className="flex flex-col justify-between"
+//   >
+//     <div className="w-11 h-11 bg-zinc-900 rounded-2xl flex items-center justify-center text-white mb-3">
+//       <Twitter size={20} />
+//     </div>
+//     <div>
+//       <h3 className="font-bold text-lg tracking-tight">X / Twitter</h3>
+//       <p className="text-zinc-400 text-sm font-mono mt-1">@MuhammadNoviya6</p>
+//     </div>
+//   </BentoCard>
+// );
 
 // --- GitHub Card ---
 const GithubCard = ({ index }: { index: number }) => (
   <BentoCard
-    href="https://github.com/muhnov"
+    href="https://github.com/muhnovi"
     index={index}
     dark
     className="flex flex-col justify-between"
@@ -237,7 +255,9 @@ const EmailCard = ({ index }: { index: number }) => (
     </div>
     <div className="flex-1 overflow-hidden">
       <h3 className="font-bold text-lg tracking-tight">Kirim Email</h3>
-      <p className="text-zinc-400 text-sm font-mono truncate">muhnoviyanto815@gmail.com</p>
+      <p className="text-zinc-400 text-sm font-mono truncate">
+        muhnoviyanto815@gmail.com
+      </p>
     </div>
     <div className="bg-zinc-900 text-white p-2.5 rounded-full shrink-0">
       <ArrowUpRight size={18} />
@@ -250,7 +270,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f3f3f3] dark:bg-[#0a0a0a] text-zinc-900 dark:text-white pb-24 pt-12 px-4 sm:px-6 font-(--font-space-grotesk)">
       <div className="max-w-2xl mx-auto">
-
         {/* Profile Header */}
         <motion.div
           initial={{ opacity: 0, y: -24 }}
@@ -263,7 +282,11 @@ export default function App() {
             whileTap={{ scale: 0.95 }}
             className="w-28 h-28 rounded-full overflow-hidden border-4 border-white shadow-md mb-6"
           >
-            <img src={profileData.avatar} alt="Profile" className="w-full h-full object-cover" />
+            <img
+              src={profileData.avatar}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
           <h1 className="text-4xl font-bold tracking-tight mb-1 text-zinc-900 dark:text-white">
@@ -287,7 +310,7 @@ export default function App() {
           <TikTokCard index={3} />
           <FacebookCard index={4} />
           <DiscordCard index={5} />
-          <TwitterCard index={6} />
+          {/* <TwitterCard index={6} /> */}
           <GithubCard index={7} />
           <EmailCard index={8} />
         </div>
